@@ -1,9 +1,13 @@
 {% extends 'tasks_app/base.html' %}
+
 {% block content %}
     <h2>Categories</h2>
-    <ul>
+    <ul class="list-group">
         {% for category in categories %}
-            <li>{{ category.name }}</li>
+            <li class="list-group-item">
+                <!-- Make category names clickable to show tasks under that category -->
+                <a href="{% url 'category_tasks' category.id %}">{{ category.name }}</a>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}
