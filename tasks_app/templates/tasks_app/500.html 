@@ -1,0 +1,6 @@
+{% extends 'tasks_app/base.html' %}
+
+{% block content %}
+<h2>500 - Server Error</h2>
+<p>Sorry, something went wrong on our end. Please try again later.</p>
+{% endblock %}

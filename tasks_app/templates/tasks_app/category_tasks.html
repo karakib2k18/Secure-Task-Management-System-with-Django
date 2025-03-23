@@ -1,0 +1,9 @@
+{% extends 'tasks_app/base.html' %}
+{% block content %}
+    <h2>Tasks in {{ category.name }} Category</h2>
+    <ul>
+        {% for task in tasks %}
+            <li><a href="{% url 'task_detail' task.id %}">{{ task.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
